@@ -1,6 +1,13 @@
 {
-  "name": "chatgpt-next-web",
-  "private": false,
+  "name": "@jonehome/chatgpt-web",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoneHome/ChatGPT-Web"
+  },
   "license": "mit",
   "scripts": {
     "dev": "next dev",
@@ -13,7 +20,8 @@
     "app:build": "yarn tauri build",
     "prompts": "node ./scripts/fetch-prompts.mjs",
     "prepare": "husky install",
-    "proxy-dev": "sh ./scripts/init-proxy.sh && proxychains -f ./scripts/proxychains.conf yarn dev"
+    "proxy-dev": "sh ./scripts/init-proxy.sh && proxychains -f ./scripts/proxychains.conf yarn dev",
+    "test": "echo `test`"
   },
   "dependencies": {
     "@fortaine/fetch-event-source": "^3.0.6",
